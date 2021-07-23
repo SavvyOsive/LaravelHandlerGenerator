@@ -8,10 +8,11 @@ class HandlerGeneratorCommand extends Command
 {
     public $signature = 'handler-generator';
 
-    public $description = 'My command';
+    public $description = 'Generate Handlers for your Models';
 
     public function handle()
     {
-        $this->comment('All done');
+        $config = config('handler-generator.key');
+        $this->comment($config);
     }
 }
